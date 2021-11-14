@@ -1,0 +1,220 @@
+	* {
+		box-sizing:border-box;
+	}
+	body {
+		margin:0;
+		padding:0;
+		background-color: white;
+		overflow-x:hidden;
+		font-family: 'Expletus Sans', cursive;
+		font-size:16px;
+	}
+
+	.container {
+		position:relative;
+		width: 100%;
+    	height: 100vh;
+    	z-index:-1;
+	}
+
+	.spin {
+		-webkit-transform-origin-y: 250px;
+    	-webkit-animation: rotation 30s infinite linear;
+	}
+
+	@-webkit-keyframes rotation {
+	    0%   {-webkit-transform: rotate(0deg)}
+	    100% {-webkit-transform: rotate(360deg)}
+	}
+
+	.shape {
+		width:50px; height:3000px;
+		position:absolute;
+		background:white;
+		left:calc(50% - 25px); 
+		top:calc(50% - 1350px); /* -1500px */
+		z-index:-1;
+		background-color: white;
+		transition: all 0.2s;
+		border-color:white;
+		border:solid 4px white;
+		 
+		opacity:1;
+
+		animation-name: colourblend;
+		animation-duration: 11.5s; 
+		animation-timing-function: ease-out; 
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-fill-mode: none;
+		animation-play-state: running;
+	}
+
+	.shape-l {
+		transform:rotate(45deg);
+	}
+
+	.shape-r {
+		transform:rotate(-45deg);
+	}
+
+	.shape-r:hover {
+		transform:rotate(-90deg);
+	}	
+
+	.shape-1 {
+		margin-left:-400px;
+		animation-delay:0s;
+		z-index:1;
+	}
+	.shape-2 {
+   		margin-left:-300px;
+		animation-delay:0.2s;
+		z-index:2;
+	}
+	.shape-3 {
+		margin-left:-200px;
+		z-index:1;
+		animation-delay:0.4s;
+	}
+	.shape-4 {
+		margin-left:-100px;
+		z-index:2;
+		animation-delay:0.6s;
+	}
+
+
+	.shape-5 {
+		margin-left:100px;
+		z-index:2;
+		animation-delay:0.8s;
+	}
+	.shape-6 {
+		margin-left:200px;
+		z-index:1;
+		animation-delay:1s;
+	}
+	.shape-7 {
+		margin-left:300px;
+		z-index:2;
+		animation-delay:1.2s;
+	}
+	.shape-8 {
+		margin-left:400px;
+		animation-delay:1.4s;
+		z-index:1;
+	}
+
+
+	@keyframes colourblend {
+		0% {
+		    background-color: crimson;
+		}
+		33.333% {
+		    background-color: purple;
+		}
+		66.666% {
+		    background-color: lightblue;
+		}
+		100% {
+		    background-color: forestgreen;
+		}
+	}
+
+	.heading {
+		/*border:solid 40px black;*/
+		position:absolute;
+		height:100%;
+		width:100vw;
+		left:0; top:0;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		align-content:center;
+		flex-flow: row wrap;
+		z-index:999;
+		margin:0;
+	}	
+	h1 {
+		position:relative;
+		text-align:center;
+		color: rgba(0,0,0,1);
+		width:100%;
+		margin:0;
+		margin-top:-200px;
+		font-size: 3em;
+		letter-spacing: 2px;
+
+		text-shadow: 
+	    -1px -1px 0 white,
+	    -2px -2px 0 white;
+	}
+	h3 {
+		text-align:center;
+		width:100%;
+		margin:0;
+		margin-top:-120px;
+		color: rgba(0,0,0,1);
+		font-size: 1.7em;
+		letter-spacing: 2px;
+	}
+
+
+	.sec {
+		position:relative;
+		width:600px;
+		margin-left:auto; margin-right:auto;
+		background-color:whitesmoke;
+		padding:20px;
+	}
+
+	.sec p::first-letter {
+
+	}
+	.sec p {
+		font-size:1.1rem;
+	}
+
+	.highlight {
+		background: #ffff32;
+		background: -moz-linear-gradient(top, transparent 0%, transparent 50%, #fffa7f 51%, #fffa7f 100%);
+		background: -webkit-linear-gradient(top, transparent 0%,transparent 50%,#fffa7f 51%,#fffa7f 100%);
+		background: linear-gradient(to bottom, transparent 0%,transparent 50%,#fffa7f 51%,#fffa7f 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='#fffa7f',GradientType=0 );
+	}
+
+
+	.big-img {
+		width:800px;
+		display:block;
+		margin-left:auto; margin-right:auto;
+	}
+
+
+	.triangle {
+		position: relative;
+		margin-left:auto;
+		margin-right:auto;
+		bottom: 0;
+		width: 0; 
+		height: 0; 
+		z-index:9999999;
+		background-image: url(../img/burj.jpg);
+	    background-attachment: fixed;
+	    background-size: cover;
+	    background-position: center;
+	}
+
+	.triangle-u {
+		left: 0;
+		border-left: 400px solid white;
+  		border-right: 400px solid white;
+ 		border-bottom: 400px solid transparent;
+	}
+
+	.triangle-d {
+		right: 0;
+	  	border-left: 400px solid white;
+	  	border-right: 400px solid white;
+	  	border-top: 400px solid transparent;
+	}
