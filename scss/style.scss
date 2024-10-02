@@ -367,13 +367,13 @@
 		justify-content: center;
 		align-items: space-around;
 		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 20px; 
 		position: relative;
 		
 		&__item {
 			position: relative;
-			width: 260px;
-			height: 330px;
+			width: 280px;
+			height: 370px;
 			margin: 20px 15px;
 			background: whitesmoke;
 			overflow: hidden;
@@ -421,16 +421,6 @@
 					background-image: url(../img/portfolio/whatsalon.png);
 				}
 			}
-
-			&__border {
-				position: absolute;
-			  width: calc(100% + 2px);
-			  height: calc(100% + 2px);
-			  left: -1px;
-			  top: -1px;
-			  transition: all .3s;
-			}
-
 
 			&__header {
 				bottom: 15px;

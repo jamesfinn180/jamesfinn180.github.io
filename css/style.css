@@ -393,8 +393,8 @@ strong {
 }
 .portfolio__item {
   position: relative;
-  width: 260px;
-  height: 330px;
+  width: 280px;
+  height: 370px;
   margin: 20px 15px;
   background: whitesmoke;
   overflow: hidden;
@@ -439,14 +439,6 @@ strong {
   background-color: #37ceff;
   background-size: contain;
   background-image: url(../img/portfolio/whatsalon.png);
-}
-.portfolio__item__border {
-  position: absolute;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  left: -1px;
-  top: -1px;
-  transition: all 0.3s;
 }
 .portfolio__item__header {
   bottom: 15px;
